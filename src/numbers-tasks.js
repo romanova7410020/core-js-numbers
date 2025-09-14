@@ -299,6 +299,7 @@ function getSumToN(n) {
  */
 function getSumOfDigits(/* num */) {
   throw new Error('Not implemented');
+  /* const numberToString = String(num); */
 }
 
 /**
@@ -312,8 +313,15 @@ function getSumOfDigits(/* num */) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  if (num < 1) return false;
+
+  let value = num;
+  while (value % 2 === 0) {
+    value /= 2;
+  }
+
+  return value === 1;
 }
 
 /**
