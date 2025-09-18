@@ -297,9 +297,11 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
-  /* const numberToString = String(num); */
+function getSumOfDigits(num) {
+  return String(num)
+    .split('')
+    .map(Number)
+    .reduce((sum, digit) => sum + digit, 0);
 }
 
 /**
@@ -626,8 +628,9 @@ function getHypotenuse(a, b) {
  * 10 => 5
  * 15 => 8
  */
-function getCountOfOddNumbers(/* number */) {
-  throw new Error('Not implemented');
+function getCountOfOddNumbers(number) {
+  const n = Math.abs(number);
+  return Math.floor((n + 1) / 2);
 }
 
 module.exports = {
